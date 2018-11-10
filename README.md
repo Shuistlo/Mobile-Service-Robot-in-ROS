@@ -15,3 +15,5 @@ there exists a master that connects nodes together
 
 
 catkin_init_workspace
+
+you should use rqt 
