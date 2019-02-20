@@ -17,3 +17,5 @@ there exists a master that connects nodes together
 catkin_init_workspace
 
 you should use rqt 
+
+I will upload complete robot code and video demonstrations after the 8th of April of turtlebot visitor escort. 
