@@ -1,0 +1,67 @@
+REVERT KEYBOARD
+SHIFT WINDOWS KEY SPACE
+
+TURTLEBOT SIMULATION:
+roslaunch turtlebot_gazebo amcl_demo.launch map_file:=<full path to your map YAML file>
+
+for instance,
+roslaunch turtlebot_gazebo turtlebot_world.launch
+
+for rviz,
+looking at the robot 
+roslaunch turtlebot_rviz_launchers view_robot.launch
+
+so,
+
+roslaunch turtlebot_gazebo turtlebot_world.launch
+roslaunch turtlebot_gazebo amcl_demo.launch map_file:=/home/shu/maps/5thedited.yaml initial_pose_x:=18.6 initial_pose_y:=8.53 initial_pose_a:=47.1
+roslaunch turtlebot_rviz_launchers view_navigation.launch
+
+
+TURTLEBOT STAGE:
+
+roslaunch turtlebot_stage turtlebot_in_stage.launch map_file:="/home/shu/maps/7thedited.yaml" world_file:="/home/shu/maps/7thedited.world" initial_pose_x:=36.5 initial_pose_y:=17 initial_pose_a:=0.0
+
+roslaunch turtlebot_stage turtlebot_in_stage.launch map_file:="/home/shu/maps/map-strand-first-floor-5cm.yaml" world_file:="/home/shu/maps/map-strand-first-floor-5cm.world" initial_pose_x:=11.2 initial_pose_y:=33.25 initial_pose_a:=47.1
+
+ODOMETRY INFORMATION:
+rosrun tf tf_echo /map /base_link
+
+roslaunch turtlebot_teleop keyboard_teleop.launch
+
+USEFUL
+#to make it on command line
+
+touch filename.py
+
+rostopic type /odom
+
+
+PACKAGE OFF GIT
+
+cd ~/catkin_ws/src
+git clone -b <branch> <address>
+cd ~/catkin_ws 
+catkin_make
+
+tree -d ~/catkin_ws #displays tree of packages
+
+source ~/catkin_ws/devel/setup.bash #YOU WILL NEED TO SOURCE YOUR BASH FILE 
+
+
+STAGE IS GREAT
+	
+WHILST NAVIGATING AROUND REALIZED TOO MUCH DETAIL ON MAY CAUSES A LOT OF UNCERTAINTY
+WHILST LOCALIZING REALIZED I SHOULD MAKE IT TURN FULL CIRCLES THIS HAS BEEN TUNED
+DO I PLAY WITH THE ODOMETRY OR THE MAP LAUNCH?
+unplug the hardware after start up and plug your mouse back in it helps a lot
+
+gotta do elevator client testing in the gazebo world since editing the stageros launch is a damn nightmare
+nah it dont work on the gazebo for some dumbass reason
+
+wanted to use discord to talk to the robot
+nah that aint happening discord dont support python 2.7
+
+need to get rid of the shading on the maps
+
+seems to be soem disparity betwen the world coordinates and the rviz coordintes

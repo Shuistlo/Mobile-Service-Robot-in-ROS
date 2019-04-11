@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="multi_map_server" pkg="multi_map_server" type="multi_map_server" args="$(find multi_map_server)/test/testmap.yaml"/>
+
+  <test test-name="multi_map_server_test" pkg="multi_map_server" type="rtest"/>
+
+</launch>
