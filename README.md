@@ -2,7 +2,7 @@
 
 Please see the instructions.pdf file for how to run this code. Below are some videos of the robot in action:
 A video of the Turtlebot from start up. Footage depicts the initial robot localization spin and the Turtlebot going to a lobby goal and a north wing goal on the 7th floor. 
-{https://photos.app.goo.gl/P4G1C8FnU3J2HEBD8}
+https://photos.app.goo.gl/P4G1C8FnU3J2HEBD8
 
 A video of the Turtlebot performing an escort to 701N from the 7th floor lobby.
 \url{https://photos.app.goo.gl/BxgK4TcWSGUGxdwS6}
